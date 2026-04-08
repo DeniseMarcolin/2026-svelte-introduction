@@ -5,7 +5,7 @@
 
     let canvas
 
-    onMount(() => {
+    $effect(() => { // può essere lanciato infinite volte, onMount solo una volta
         const context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
 
