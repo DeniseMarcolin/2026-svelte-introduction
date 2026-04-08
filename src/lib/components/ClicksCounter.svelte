@@ -1,7 +1,6 @@
 <script>
-    console.log("hello world")
-    let count = $state(0)
-    let doubled = $derived (count * 2)
+    let { initialCount: count = $bindable() } = $props()
+    let doubled = $derived(count * 2)
 </script>
 
 <h3>Clicks Counter</h3>
